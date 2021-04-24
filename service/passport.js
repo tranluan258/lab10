@@ -13,7 +13,7 @@ passport.deserializeUser(function(user, done) {
 passport.use( new GoogleStrategy({
     clientID: CLIENT_ID,
     clientSecret: CLIENT_SECRET,
-    callbackURL: '/auth/google/callback'
+    callbackURL: 'https://lab10-socket.herokuapp.com/auth/google/callback'
 },
     function(accessToken,resfreshToken,profile, done) {
         if(profile._json.hd === "student.tdtu.edu.vn") {
